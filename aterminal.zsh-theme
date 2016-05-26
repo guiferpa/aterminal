@@ -4,7 +4,7 @@ local ptime=$(date +%H:%M:%S)
 
 PROMPT=' ${ret_status}${pdate} - ${ptime} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[161]"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔"
@@ -14,7 +14,7 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
 
 #RVM info
 local rvm_info='$(rvm_prompt_info)'
-ZSH_THEME_RVM_PROMPT_PREFIX="$FG[161]⬥ "
+ZSH_THEME_RVM_PROMPT_PREFIX="%{$fg[red]%}⬥ "
 ZSH_THEME_RVM_PROMPT_SUFFIX="%{$reset_color%}"
 
 # GVM info
