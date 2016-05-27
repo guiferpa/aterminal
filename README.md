@@ -1,1 +1,1 @@
-https://github.com/guilhermeepaixaoo/aterminal-oh-my-zsh-theme/blob/master/demo.png
+![Demo aterminal](https://raw.githubusercontent.com/guilhermeepaixaoo/aterminal-oh-my-zsh-theme/master/demo.png)
