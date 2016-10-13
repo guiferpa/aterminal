@@ -1,9 +1,9 @@
-# Aterminal Oh My ZSH Theme
+# Aterminal 
+> Oh My ZSH Theme
 
 ## Features
 * Display version in your command-line, support __Node.js__, __Golang__ and __Ruby__
 * Dependencies status in __Git__
-* Display current hour and date in your command-line
 * Nice colors :smile:
 
 ## Terminal
