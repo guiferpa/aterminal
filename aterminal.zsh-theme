@@ -5,7 +5,7 @@ PROMPT='${ret_status} $(git_prompt_info)'
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[161]"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[yellow]%} ! "
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} "
 
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$fg_bold[white]%}[%{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
