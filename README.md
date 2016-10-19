@@ -11,6 +11,10 @@
 ### Success command
 ![Success command](images/demo1.png)
 
+
+### Fail command
+![Fail command](images/demo4.png)
+
 ### Git status with dependencie commit
 ![Git status with dependencie commit](images/demo2.png)
 
