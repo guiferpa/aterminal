@@ -7,7 +7,15 @@
 * Nice colors :smile:
 
 ## Terminal
-![Demo](https://raw.githubusercontent.com/guilhermeepaixaoo/aterminal-oh-my-zsh-theme/master/demo.png)
+
+### Success command
+![Success command](images/demo1.png)
+
+### Git status with dependencie commit
+![Git status with dependencie commit](images/demo2.png)
+
+### Git status without dependencie commit
+![Git status without dependencie commit](images/demo3.png)
 
 ## Install
 - [x] You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
