@@ -31,4 +31,4 @@
 Anything you think nice, fork it. Will very nice have your contribution. :octocat:
 
 ## License
-[MIT license](LICENSE.md) © [@gpaixao](github.com/gpaixao)
+[MIT license](LICENSE.md) © [@gpaixao](http://github.com/gpaixao)
