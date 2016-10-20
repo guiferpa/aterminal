@@ -2,9 +2,9 @@
 > Oh My ZSH Theme
 
 ## Features
-* Display version in your command-line, support __Node.js__, __Golang__ and __Ruby__
-* Dependencies status in __Git__
-* Nice colors :smile:
+* Show version in your command-line, support __Node.js__, __Golang__ and __Ruby__
+* Status __Git__
+* Nice colors :heart:
 
 ## Terminal
 
@@ -30,3 +30,5 @@
 ## Fork it
 Anything you think nice, fork it. Will very nice have your contribution. :octocat:
 
+## License
+[MIT license](LICENSE.md) © [@gpaixao](github.com/gpaixao)
