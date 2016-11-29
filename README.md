@@ -2,11 +2,13 @@
 > Oh My ZSH Theme
 
 ## Features
-* Show version in your command-line, support __Node.js__, __Golang__ and __Ruby__
+* Show version in your command-line, support __Node.js__, __Golang__, __Elixir__ and __Ruby__
 * Status __Git__
 * Nice colors :heart:
 
 ## Terminal
+
+> Obs.: Terminal demos without Elixir version
 
 ### Success command
 ![Success command](images/demo1.png)
