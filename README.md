@@ -2,7 +2,7 @@
 > Oh My ZSH Theme
 
 ## Features
-* Show version in your command-line, support __Node.js__, __Golang__, __Elixir__ and __Ruby__
+* Show version in your command-line, support __Node.js__, __NPM__, __Golang__, __Python__, __Elixir__ and __Ruby__
 * Status __Git__
 * Nice colors :heart:
 
