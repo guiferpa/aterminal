@@ -11,17 +11,17 @@
 ![Demo](https://media.giphy.com/media/3ohzdOTnRKCYEpLpza/giphy.gif)
 
 ### Success command
-![Success command](images/demo1.png)
+![Success command](images/demo_1.png)
 
 
 ### Fail command
-![Fail command](images/demo4.png)
+![Fail command](images/demo_3.png)
 
 ### Git status with dependencie commit
-![Git status with dependencie commit](images/demo2.png)
+![Git status with dependencie commit](images/demo_2.png)
 
 ### Git status without dependencie commit
-![Git status without dependencie commit](images/demo3.png)
+![Git status without dependencie commit](images/demo_1.png)
 
 ## Install
 - [x] You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
