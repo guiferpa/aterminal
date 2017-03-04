@@ -10,51 +10,76 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} "
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$fg_bold[white]%}[%{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
 
-# Ruby info
-ruby_prompt_info() {
-  if which ruby >/dev/null; then
-    RUBY_VERSION=$(ruby -v | awk '{print $2}')
-    ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[red]%}ruby"
-    ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
-    echo "$ZSH_THEME_RUBY_PROMPT_PREFIX$RUBY_VERSION$ZSH_THEME_RUBY_PROMPT_SUFFIX"
-  else
-    echo '';
+# NPM info
+npm_prompt_info() {
+  if which npm >/dev/null && [ -f "./package.json" ] ; then
+    NPM_VERSION=`npm -v`
+    ZSH_THEME_NPM_PROMPT_PREFIX="%{$fg[red]%}npm"
+    ZSH_THEME_NPM_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_NPM_PROMPT_PREFIX$NPM_VERSION$ZSH_THEME_NPM_PROMPT_SUFFIX"
   fi
 }
 
-local ruby_info='$(ruby_prompt_info)'
+local npm_info='$(npm_prompt_info)'
+
+# Node info
+node_prompt_info() {
+  if which node >/dev/null && [ ! -z `ls | grep \.js$ | head -1` ]; then
+    NODE_VERSION=`node -v | awk '{print substr($1,2); }'`
+    ZSH_THEME_NODE_PROMPT_PREFIX="%{$fg[green]%}node"
+    ZSH_THEME_NODE_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_NODE_PROMPT_PREFIX$NODE_VERSION$ZSH_THEME_NODE_PROMPT_SUFFIX"
+  fi
+}
+
+local node_info='$(node_prompt_info)'
+
+# Python info
+python_prompt_info() {
+  if which python >/dev/null && [ ! -z `ls | grep \.py$ | head -1` ]; then
+    PYTHON_VERSION=`python -c 'import platform; print(platform.python_version())'`
+    ZSH_THEME_PYTHON_PROMPT_PREFIX="%{$fg[yellow]%}python"
+    ZSH_THEME_PYTHON_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_PYTHON_PROMPT_PREFIX$PYTHON_VERSION$ZSH_THEME_PYTHON_PROMPT_SUFFIX"
+  fi
+}
+
+local python_info='$(python_prompt_info)'
 
 # GVM info
-gvm_prompt_info() {
-  if which go >/dev/null; then
+go_prompt_info() {
+  if which go >/dev/null && [ ! -z `ls | grep \.go$ | head -1` ]; then
     GO_VERSION=$(go version | awk '{print $3}')
     ZSH_THEME_GVM_PROMPT_PREFIX=""
     ZSH_THEME_GVM_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_GVM_PROMPT_PREFIX$GO_VERSION$ZSH_THEME_GVM_PROMPT_SUFFIX"
-  else
-    echo '';
   fi
 }
 
-local gvm_info='$(gvm_prompt_info)'
+local go_info='$(go_prompt_info)'
 
 # Elixir info
 exl_prompt_info() {
-  if which elixir >/dev/null; then
+  if which elixir >/dev/null && [ ! -z `ls | grep \.ex$ | head -1` ] || [ ! -z `ls | grep \.exs$ | head -1` ] ; then
     EXL_VERSION=$(elixir -v | grep Elixir | awk '{print $2}')
     ZSH_THEME_EXL_PROMPT_PREFIX="$FG[135]elixir"
     ZSH_THEME_EXL_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_EXL_PROMPT_PREFIX$EXL_VERSION$ZSH_THEME_EXL_PROMPT_SUFFIX"
-  else
-    echo '';
   fi
 }
 
 local exl_info='$(exl_prompt_info)'
 
-# NVM info
-local nvm_info='$(nvm_prompt_info)'
-ZSH_THEME_NVM_PROMPT_PREFIX="%{$fg[green]%}node"
-ZSH_THEME_NVM_PROMPT_SUFFIX="%{$reset_color%}"
+# Ruby info
+ruby_prompt_info() {
+  if which ruby >/dev/null && [ ! -z `ls | grep \.rb$ | head -1` ]; then
+    RUBY_VERSION=$(ruby -v | awk '{print $2}')
+    ZSH_THEME_RUBY_PROMPT_PREFIX="%{$FG[161]%}ruby"
+    ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_RUBY_PROMPT_PREFIX$RUBY_VERSION$ZSH_THEME_RUBY_PROMPT_SUFFIX"
+  fi
+}
 
-RPROMPT="${nvm_info}  ${gvm_info}  ${exl_info}  ${ruby_info}"
+local ruby_info='$(ruby_prompt_info)'
+
+RPROMPT="${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info}"
