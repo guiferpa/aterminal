@@ -8,7 +8,7 @@
 
 ## Terminal
 
-![Demo](https://media.giphy.com/media/3ohzdOTnRKCYEpLpza/giphy.gif)
+![Demo](images/demo.gif)
 
 ### Success command
 ![Success command](images/demo_1.png)
