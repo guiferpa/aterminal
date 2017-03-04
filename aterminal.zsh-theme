@@ -10,6 +10,18 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} "
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$fg_bold[white]%}[%{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
 
+# Docker info
+docker_prompt_info() {
+  if which docker >/dev/null && [ -f "./Dockerfile" ] ; then
+    DOCKER_VERSION=`docker -v | awk '{print $3}'`
+    ZSH_THEME_DOCKER_PROMPT_PREFIX="%{$fg[cyan]%}docker"
+    ZSH_THEME_DOCKER_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_DOCKER_PROMPT_PREFIX$DOCKER_VERSION$ZSH_THEME_DOCKER_PROMPT_SUFFIX"
+  fi
+}
+
+local docker_info='$(docker_prompt_info)'
+
 # NPM info
 npm_prompt_info() {
   if which npm >/dev/null && [ -f "./package.json" ] ; then
@@ -49,7 +61,7 @@ local python_info='$(python_prompt_info)'
 # GVM info
 go_prompt_info() {
   if which go >/dev/null && [ ! -z `ls | grep \.go$ | head -1` ]; then
-    GO_VERSION=$(go version | awk '{print $3}')
+    GO_VERSION=`go version | awk '{print $3}'`
     ZSH_THEME_GVM_PROMPT_PREFIX=""
     ZSH_THEME_GVM_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_GVM_PROMPT_PREFIX$GO_VERSION$ZSH_THEME_GVM_PROMPT_SUFFIX"
@@ -61,7 +73,7 @@ local go_info='$(go_prompt_info)'
 # Elixir info
 exl_prompt_info() {
   if which elixir >/dev/null && [ ! -z `ls | grep \.ex$ | head -1` ] || [ ! -z `ls | grep \.exs$ | head -1` ] ; then
-    EXL_VERSION=$(elixir -v | grep Elixir | awk '{print $2}')
+    EXL_VERSION=`elixir -v | grep Elixir | awk '{print $2}'`
     ZSH_THEME_EXL_PROMPT_PREFIX="$FG[135]elixir"
     ZSH_THEME_EXL_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_EXL_PROMPT_PREFIX$EXL_VERSION$ZSH_THEME_EXL_PROMPT_SUFFIX"
@@ -73,7 +85,7 @@ local exl_info='$(exl_prompt_info)'
 # Ruby info
 ruby_prompt_info() {
   if which ruby >/dev/null && [ ! -z `ls | grep \.rb$ | head -1` ]; then
-    RUBY_VERSION=$(ruby -v | awk '{print $2}')
+    RUBY_VERSION=`ruby -v | awk '{print $2}'`
     ZSH_THEME_RUBY_PROMPT_PREFIX="%{$FG[161]%}ruby"
     ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_RUBY_PROMPT_PREFIX$RUBY_VERSION$ZSH_THEME_RUBY_PROMPT_SUFFIX"
@@ -82,4 +94,4 @@ ruby_prompt_info() {
 
 local ruby_info='$(ruby_prompt_info)'
 
-RPROMPT="${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info}"
+RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info}"
