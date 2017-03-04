@@ -2,13 +2,13 @@
 > Oh My ZSH Theme
 
 ## Features
-* Show version in your command-line, support __Node.js__, __NPM__, __Golang__, __Python__, __Elixir__ and __Ruby__
+* Show version in your command-line, support __Node.js__, __NPM__, __Docker__, __Golang__, __Python__, __Elixir__ and __Ruby__
 * Status __Git__
 * Nice colors :heart:
 
 ## Terminal
 
-> Obs.: Terminal demos without Elixir version
+![Demo](https://media.giphy.com/media/3ohzdOTnRKCYEpLpza/giphy.gif)
 
 ### Success command
 ![Success command](images/demo1.png)
@@ -25,8 +25,8 @@
 
 ## Install
 - [x] You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
-- [ ] Clone theme: `git clone https://github.com/guilhermeepaixaoo/aterminal-oh-my-zsh-theme.git`
-- [ ] Move to directory themes: `mv aterminal-oh-my-zsh-theme/aterminal.zsh-theme $HOME/.oh-my-zsh/themes/`
+- [ ] Clone theme: `git clone https://github.com/guiferpa/aterminal.git`
+- [ ] Move to directory themes: `mv aterminal/aterminal.zsh-theme $HOME/.oh-my-zsh/themes/`
 - [ ] Change your theme in `nano $HOME/.zshrc`
 
 ## Fork it
