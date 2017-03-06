@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg[white]%}:%{$fg_bold[red]%})$(logname)%{$reset_color%}"
+local ret_status=" %(?:%{$fg[white]%}:%{$fg_bold[red]%})$(id -u -n)%{$reset_color%}"
 
 PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
@@ -13,7 +13,7 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
 # Docker info
 docker_prompt_info() {
   if which docker >/dev/null && [ -f "./Dockerfile" ] ; then
-    DOCKER_VERSION=`docker -v | awk '{print $3}'`
+    DOCKER_VERSION=`docker -v | awk '{print substr($3, 0, length($3))}'`
     ZSH_THEME_DOCKER_PROMPT_PREFIX="%{$fg[cyan]%}docker"
     ZSH_THEME_DOCKER_PROMPT_SUFFIX="%{$reset_color%}"
     echo "$ZSH_THEME_DOCKER_PROMPT_PREFIX$DOCKER_VERSION$ZSH_THEME_DOCKER_PROMPT_SUFFIX"
@@ -94,4 +94,4 @@ ruby_prompt_info() {
 
 local ruby_info='$(ruby_prompt_info)'
 
-RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info}"
+RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info} "
