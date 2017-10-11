@@ -11,10 +11,13 @@ This plugin show platforms version
 ![Demo](images/demo.gif)
 
 ## Install
-1. You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
-2. Clone plugin: `git clone https://github.com/guiferpa/aterminal.git`
-3. Move to plugins directory: `mv aterminal $HOME/.oh-my-zsh/plugins/`
-4. Add plugin in `nano $HOME/.zshrc`
+> :warning: You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
+
+#### Run installer
+`bash < <(curl -s -S -L https://raw.githubusercontent.com/guiferpa/aterminal/master/installer.sh)`
+
+#### Add aterminal plugin
+`vim $HOME/.zshrc`
 
 ## Fork it
 Anything you think nice, fork it. Will very nice have your contribution. :octocat:
