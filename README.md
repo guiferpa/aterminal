@@ -1,5 +1,5 @@
 # Aterminal 
-> Oh My ZSH Theme
+> Oh My ZSH Plugin
 
 ## Features
 * Show version in your command-line, support __Node.js__, __NPM__, __Docker__, __Golang__, __Python__, __Elixir__ and __Ruby__
@@ -25,9 +25,9 @@
 
 ## Install
 - [x] You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
-- [ ] Clone theme: `git clone https://github.com/guiferpa/aterminal.git`
-- [ ] Move to directory themes: `mv aterminal/aterminal.zsh-theme $HOME/.oh-my-zsh/themes/`
-- [ ] Change your theme in `nano $HOME/.zshrc`
+- [ ] Clone plugin: `git clone https://github.com/guiferpa/aterminal.git`
+- [ ] Move to plugins directory: `mv aterminal/aterminal.plugin.zsh $HOME/.oh-my-zsh/plugins/`
+- [ ] Add plugin in `nano $HOME/.zshrc`
 
 ## Fork it
 Anything you think nice, fork it. Will very nice have your contribution. :octocat:
