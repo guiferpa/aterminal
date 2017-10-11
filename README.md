@@ -1,6 +1,9 @@
 # Aterminal 
 > Oh My ZSH Plugin
 
+## Description
+This plugin show platforms version
+
 ## Support
 [Nodejs](https://nodejs.org), [NPM](https://www.npmjs.com), [Docker](https://www.docker.com), [Go](https://golang.org), [Python](https://www.python.org), [Elixir](https://elixir-lang.org) and [Ruby](https://www.ruby-lang.org)
 
