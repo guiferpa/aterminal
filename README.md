@@ -10,7 +10,7 @@
 ## Install
 1. You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
 2. Clone plugin: `git clone https://github.com/guiferpa/aterminal.git`
-3. Move to plugins directory: `mv aterminal/aterminal.plugin.zsh $HOME/.oh-my-zsh/plugins/`
+3. Move to plugins directory: `mv aterminal $HOME/.oh-my-zsh/plugins/`
 4. Add plugin in `nano $HOME/.zshrc`
 
 ## Fork it
