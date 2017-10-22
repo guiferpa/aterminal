@@ -70,6 +70,18 @@ exl_prompt_info() {
 
 local exl_info='$(exl_prompt_info)'
 
+# Erlang info
+erl_prompt_info() {
+  if which erl 2>/dev/null 1>/dev/null && [ ! -z `ls | grep \.erl$ | head -1` ] || [ ! -z `ls | grep \.escript$ | head -1` ]; then
+    ERL_VERSION=`erl -eval 'io:format("~s~n", [erlang:system_info(otp_release)]), halt().' -noshell`
+    ZSH_THEME_ERL_PROMPT_PREFIX="$FG[124]erlang"
+    ZSH_THEME_ERL_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_ERL_PROMPT_PREFIX$ERL_VERSION$ZSH_THEME_ERL_PROMPT_SUFFIX"
+  fi
+}
+
+local erl_info='$(erl_prompt_info)'
+
 # Ruby info
 ruby_prompt_info() {
   if which ruby 2>/dev/null 1>/dev/null && [ ! -z `ls | grep \.rb$ | head -1` ]; then
@@ -82,4 +94,4 @@ ruby_prompt_info() {
 
 local ruby_info='$(ruby_prompt_info)'
 
-RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info} "
+RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${erl_info}  ${ruby_info} "

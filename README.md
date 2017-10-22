@@ -5,7 +5,7 @@
 This plugin show platforms version
 
 ## Support
-[Nodejs](https://nodejs.org), [NPM](https://www.npmjs.com), [Docker](https://www.docker.com), [Go](https://golang.org), [Python](https://www.python.org), [Elixir](https://elixir-lang.org) and [Ruby](https://www.ruby-lang.org)
+[Nodejs](https://nodejs.org), [NPM](https://www.npmjs.com), [Docker](https://www.docker.com), [Go](https://golang.org), [Python](https://www.python.org), [Elixir](https://elixir-lang.org), [Erlang](http://www.erlang.org) and [Ruby](https://www.ruby-lang.org)
 
 ## Demo
 ![Demo](images/demo.gif)
