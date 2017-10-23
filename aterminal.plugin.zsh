@@ -82,4 +82,16 @@ ruby_prompt_info() {
 
 local ruby_info='$(ruby_prompt_info)'
 
-RPROMPT="${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info} "
+# Rust info
+rust_prompt_info() {
+  if which rustc 2>/dev/null 1>/dev/null && [ ! -z `ls -l | grep '\.rs$' | head -1` ] || [ ! -z `ls -l | grep '\.rlib$' | head -1` ] || [ -f "./Cargo.toml" ]; then
+    RUST_VERSION=`rustc -V | awk '{print $2}'`
+    ZSH_THEME_RUST_PROMPT_PREFIX="%{$FG[141]%}rust"
+    ZSH_THEME_RUST_PROMPT_SUFFIX="%{$reset_color%}"
+    echo "$ZSH_THEME_RUST_PROMPT_PREFIX$RUST_VERSION$ZSH_THEME_RUST_PROMPT_SUFFIX"
+  fi
+}
+
+local rust_info='$(rust_prompt_info)'
+
+RPROMPT="${rust_info} ${docker_info} ${npm_info}  ${node_info}  ${python_info}  ${go_info}  ${exl_info}  ${ruby_info} "
