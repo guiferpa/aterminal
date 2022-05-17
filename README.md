@@ -20,7 +20,7 @@ This plugin show platforms version
 `vim $HOME/.zshrc`
 
 ## Fork it
-Anything you think nice, fork it. Will very nice have your contribution. :octocat:
+Anything you think nice, fork it. It will very nice have your contribution. :octocat:
 
 ## License
 [MIT license](LICENSE) © [@guiferpa](http://github.com/guiferpa)
