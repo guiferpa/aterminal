@@ -18,7 +18,7 @@ Aterminal's a plugin based on Oh My ZSH preset where the main goal's show tech v
 ![Demo](images/demo.gif)
 
 ## Install
-> :warning: You need to install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
+> :warning: [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh) is a requirement for this plugin works
 
 #### Run installer
 `zsh < <(curl -s -S -L https://raw.githubusercontent.com/guiferpa/aterminal/master/installer.sh)`
